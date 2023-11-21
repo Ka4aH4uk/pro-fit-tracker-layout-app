@@ -66,13 +66,13 @@ enum R {
             static func icon(for tab: Tabs) -> UIImage? {
                 switch tab {
                 case .overview: 
-                    return UIImage(named: "House_Tab")
-                case .session: 
-                    return UIImage(named: "Clock_Tab")
+                    return UIImage(named: "House Icon")
+                case .session:
+                    return UIImage(named: "Clock Icon")
                 case .progress:
-                    return UIImage(named:"Analytics_Tab")
+                    return UIImage(named:"Analytics Icon")
                 case .settings:
-                    return UIImage(named:"Gear_Tab")
+                    return UIImage(named:"Gear Icon")
                 }
             }
         }
