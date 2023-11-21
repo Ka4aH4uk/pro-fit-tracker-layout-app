@@ -133,6 +133,7 @@
 		C98FCED32B0A998500FC19AD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C98FCEF12B0CCA6600FC19AD /* Navigation */,
 				C98FCED92B0A9DA400FC19AD /* Overview */,
 				C98FCEDA2B0A9DAC00FC19AD /* Session */,
 				C98FCEDC2B0A9DC500FC19AD /* Progress */,
@@ -145,8 +146,6 @@
 		C98FCED82B0A9D8100FC19AD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C98FCEC92B08F35100FC19AD /* TabBarController.swift */,
-				C98FCED12B0A956100FC19AD /* NavBarController.swift */,
 				C98FCED42B0A99AF00FC19AD /* BaseController.swift */,
 				C98FCEE82B0AB89600FC19AD /* BaseView.swift */,
 			);
@@ -203,6 +202,15 @@
 				C98FCEED2B0B905300FC19AD /* WeekDayView.swift */,
 			);
 			path = WeekView;
+			sourceTree = "<group>";
+		};
+		C98FCEF12B0CCA6600FC19AD /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C98FCEC92B08F35100FC19AD /* TabBarController.swift */,
+				C98FCED12B0A956100FC19AD /* NavBarController.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

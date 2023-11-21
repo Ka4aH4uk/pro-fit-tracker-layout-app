@@ -12,8 +12,8 @@ class SettingsController: BaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = Resources.Strings.NavBar.settings
-        navigationController?.tabBarItem.title = Resources.Strings.TabBar.settings
+        self.navigationItem.title = R.Strings.NavBar.settings
+        navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: Tabs.settings)
        
     }
 }

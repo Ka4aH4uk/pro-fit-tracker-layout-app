@@ -20,28 +20,28 @@ extension WeekView {
             let day = Calendar.current.component(.day, from: currentDay)
             
             let isToday = currentDay.stripDate() == Date().stripDate()
-            backgroundColor = isToday ? Resources.Colors.active : Resources.Colors.background
+            backgroundColor = isToday ? R.Colors.active : R.Colors.background
             
             nameLable.text = name.uppercased()
-            nameLable.textColor = isToday ? .white : Resources.Colors.inactive
+            nameLable.textColor = isToday ? .white : R.Colors.inactive
             
             dateLabel.text = "\(day)"
-            dateLabel.textColor = isToday ? .white : Resources.Colors.inactive
+            dateLabel.textColor = isToday ? .white : R.Colors.inactive
         }
     }
 }
 
 extension WeekView.WeekDayView {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         
         addView(stackView)
         stackView.addArrangedSubview(nameLable)
         stackView.addArrangedSubview(dateLabel)
     }
     
-    override func layoutViews() {
-        super.layoutViews()
+    override func constraintViews() {
+        super.constraintViews()
         
         NSLayoutConstraint.activate([
             stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -49,16 +49,16 @@ extension WeekView.WeekDayView {
         ])
     }
     
-    override func configureView() {
-        super.configureView()
+    override func configureAppearance() {
+        super.configureAppearance()
                 
         layer.cornerRadius = 5
         layer.masksToBounds = true
         
-        nameLable.font = Resources.Fonts.helveticaRegular(with: 9)
+        nameLable.font = R.Fonts.helveticaRegular(with: 9)
         nameLable.textAlignment = .center
         
-        dateLabel.font = Resources.Fonts.helveticaRegular(with: 15)
+        dateLabel.font = R.Fonts.helveticaRegular(with: 15)
         dateLabel.textAlignment = .center
         
         stackView.spacing = 3
