@@ -17,7 +17,7 @@ extension OverviewController {
     override func setupViews() {
         super.setupViews()
         
-        view.addView(navBar)
+        view.setupView(navBar)
     }
     
     override func constraintViews() {

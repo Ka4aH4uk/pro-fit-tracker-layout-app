@@ -9,9 +9,26 @@ import UIKit
 
 final class OverviewNavBar: BaseView {
     
-    private let titleLabel = UILabel()
-    private let allWWorkoutsButton = SecondaryButton()
-    private let addButton = UIButton()
+    private let titleLabel: UILabel = {
+        let title = UILabel()
+        title.text = R.Strings.NavBar.overview
+        title.textColor = R.Colors.titleGray
+        title.font = R.Fonts.helveticaRegular(with: 22)
+        return title
+    }()
+    
+    private let allWWorkoutsButton: WAButton = {
+        let button = WAButton(with: .secondary)
+        button.setTitle(R.Strings.Overview.allWorkoutButtons)
+        return button
+    }()
+    
+    private let addButton: UIButton = {
+        let button = UIButton()
+        button.setImage(R.Images.Common.add, for: .normal)
+        return button
+    }()
+    
     private let weekView = WeekView()
     
     override func layoutSubviews() {
@@ -33,10 +50,10 @@ extension OverviewNavBar {
     override func setupViews() {
         super.setupViews()
         
-        addView(titleLabel)
-        addView(allWWorkoutsButton)
-        addView(addButton)
-        addView(weekView)
+        setupView(titleLabel)
+        setupView(allWWorkoutsButton)
+        setupView(addButton)
+        setupView(weekView)
     }
     
     override func constraintViews() {
@@ -51,7 +68,6 @@ extension OverviewNavBar {
             allWWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWWorkoutsButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWWorkoutsButton.heightAnchor.constraint(equalToConstant: 28),
-            allWWorkoutsButton.widthAnchor.constraint(equalToConstant: 130),
 
             titleLabel.centerYAnchor.constraint(equalTo: allWWorkoutsButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWWorkoutsButton.leadingAnchor),
@@ -67,14 +83,7 @@ extension OverviewNavBar {
     
     override func configureAppearance() {
         super.configureAppearance()
+        
         backgroundColor = .white
-        
-        titleLabel.text = R.Strings.NavBar.overview
-        titleLabel.textColor = R.Colors.titleGray
-        titleLabel.font = R.Fonts.helveticaRegular(with: 22)
-        
-        allWWorkoutsButton.setTitle(R.Strings.Overview.allWorkoutButtons)
-        
-        addButton.setImage(R.Images.Common.add, for: .normal)
     }
 }

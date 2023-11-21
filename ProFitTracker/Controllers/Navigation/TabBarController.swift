@@ -17,10 +17,17 @@ final class TabBarController: UITabBarController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         configureAppearance()
+        //TODO: добавлено для упрощения работы с конкретным экраном. не забыть удалить!!!
+        switchTo(tab: .session)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //TODO: добавлено для упрощения работы с конкретным экраном. не забыть удалить!!!
+    private func switchTo(tab: Tabs) {
+        selectedIndex = tab.rawValue
     }
     
     private func configureAppearance() {

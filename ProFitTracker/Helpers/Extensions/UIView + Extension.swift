@@ -21,11 +21,6 @@ extension UIView {
         addSubview(separator)
     }
     
-    func addView(_ view: UIView) {
-        addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
     func makeSystem(_ button: UIButton) {
         button.addTarget(self, action: #selector(handleIn), for: [
             .touchDown,
@@ -51,5 +46,10 @@ extension UIView {
         UIView.animate(withDuration: 0.15) {
             self.alpha = 1.0
         }
+    }
+    
+    func setupView(_ view: UIView) {
+        addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
     }
 }
