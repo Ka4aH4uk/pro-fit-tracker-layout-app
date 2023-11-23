@@ -18,7 +18,7 @@ final class TabBarController: UITabBarController {
         
         configureAppearance()
         //TODO: добавлено для упрощения работы с конкретным экраном. не забыть удалить!!!
-        switchTo(tab: .session)
+        switchTo(tab: .progress)
     }
     
     required init?(coder: NSCoder) {

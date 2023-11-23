@@ -28,6 +28,7 @@
 		C98FCEEE2B0B905300FC19AD /* WeekDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FCEED2B0B905300FC19AD /* WeekDayView.swift */; };
 		C98FCEF02B0B977E00FC19AD /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FCEEF2B0B977E00FC19AD /* Date + Extension.swift */; };
 		C98FCEF32B0CD3FF00FC19AD /* WABaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98FCEF22B0CD3FF00FC19AD /* WABaseInfoView.swift */; };
+		C9BF3C822B0FA3850006ADA3 /* DailyPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C812B0FA3850006ADA3 /* DailyPerformanceView.swift */; };
 		C9D18F842B0D40370085381D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18F832B0D40370085381D /* TimerView.swift */; };
 		C9D18F872B0D41080085381D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18F862B0D41080085381D /* ProgressView.swift */; };
 		C9D18FB02B0E7E5D0085381D /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18FAF2B0E7E5D0085381D /* PercentView.swift */; };
@@ -62,6 +63,7 @@
 		C98FCEED2B0B905300FC19AD /* WeekDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayView.swift; sourceTree = "<group>"; };
 		C98FCEEF2B0B977E00FC19AD /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		C98FCEF22B0CD3FF00FC19AD /* WABaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WABaseInfoView.swift; sourceTree = "<group>"; };
+		C9BF3C812B0FA3850006ADA3 /* DailyPerformanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPerformanceView.swift; sourceTree = "<group>"; };
 		C9D18F832B0D40370085381D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C9D18F862B0D41080085381D /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C9D18FAF2B0E7E5D0085381D /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
@@ -102,9 +104,9 @@
 		C98FCEB22B08E45D00FC19AD /* ProFitTracker */ = {
 			isa = PBXGroup;
 			children = (
-				C98FCECB2B08F3F300FC19AD /* Helpers */,
 				C98FCEC72B08F0B200FC19AD /* Application */,
 				C98FCED32B0A998500FC19AD /* Controllers */,
+				C98FCECB2B08F3F300FC19AD /* Helpers */,
 				C98FCEC82B08F0DF00FC19AD /* SupportingFiles */,
 			);
 			path = ProFitTracker;
@@ -201,6 +203,7 @@
 		C98FCEDC2B0A9DC500FC19AD /* Progress */ = {
 			isa = PBXGroup;
 			children = (
+				C9BF3C7F2B0FA2630006ADA3 /* Views */,
 				C98FCEDF2B0A9E1B00FC19AD /* ProgressController.swift */,
 			);
 			path = Progress;
@@ -240,6 +243,22 @@
 				C98FCEF22B0CD3FF00FC19AD /* WABaseInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C9BF3C7F2B0FA2630006ADA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF3C802B0FA2830006ADA3 /* Performance */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9BF3C802B0FA2830006ADA3 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF3C812B0FA3850006ADA3 /* DailyPerformanceView.swift */,
+			);
+			path = Performance;
 			sourceTree = "<group>";
 		};
 		C9D18F822B0D40220085381D /* Views */ = {
@@ -387,6 +406,7 @@
 				C9D18FB92B0E8DA90085381D /* WABarsView.swift in Sources */,
 				C98FCED22B0A956100FC19AD /* NavBarController.swift in Sources */,
 				C98FCEDE2B0A9E0800FC19AD /* SessionController.swift in Sources */,
+				C9BF3C822B0FA3850006ADA3 /* DailyPerformanceView.swift in Sources */,
 				C9D18FB02B0E7E5D0085381D /* PercentView.swift in Sources */,
 				C98FCEE52B0AABC500FC19AD /* WAButton.swift in Sources */,
 				C98FCEF32B0CD3FF00FC19AD /* WABaseInfoView.swift in Sources */,
