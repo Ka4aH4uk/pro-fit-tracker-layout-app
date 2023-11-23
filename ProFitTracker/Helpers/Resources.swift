@@ -9,8 +9,9 @@ import UIKit
 
 enum R {
     enum Colors {
-        static let active = UIColor(hexString: "#437BFE")
+        static let active = UIColor(hexString: "#FE6C3A")
         static let inactive = UIColor(hexString: "#929DA5")
+        static let shadow = UIColor(hexString: "#FEDBD1")
         
         static let background = UIColor(hexString: "#F8F9F9")
         static let separator = UIColor(hexString: "#E8ECEF")
@@ -33,10 +34,6 @@ enum R {
                     return "Settings"
                 }
             }
-//            static let overview = "Overview"
-//            static let session = "Session"
-//            static let progress = "Progress"
-//            static let settings = "Settings"
         }
         
         enum NavBar {
@@ -51,8 +48,22 @@ enum R {
         }
         
         enum Session {
-            static let navBarLeft = "Pause"
-            static let navBarRight = "Finish"
+            static let navBarStart = "Start"
+            static let navBarPause = "Pause"
+            static let navBarFinish = "Finish"
+            
+            static let elapsedTime = "Elapsed Time"
+            static let remainingTime = "Remaining Time"
+            static let completed = "Completed"
+            static let remaining = "Remaining"
+            
+            static let workoutStats = "Workout stats"
+            static let averagePace = "Average pace"
+            static let heartRate = "Heart rate"
+            static let totalDistance = "Total distance"
+            static let totalSteps = "Total steps"
+            
+            static let stepsCounter = "Steps Counter"
         }
         
         enum Progress {
@@ -65,7 +76,7 @@ enum R {
         enum TabBar {
             static func icon(for tab: Tabs) -> UIImage? {
                 switch tab {
-                case .overview: 
+                case .overview:
                     return UIImage(named: "House Icon")
                 case .session:
                     return UIImage(named: "Clock Icon")
@@ -77,9 +88,18 @@ enum R {
             }
         }
         
+        enum Session {
+            enum Stats {
+                static let averagePace = UIImage(named: "Speed Icon")
+                static let heartRate = UIImage(named: "Heart Beat Icon")
+                static let totalDistance = UIImage(named: "Maps Icon")
+                static let totalSteps = UIImage(named: "Steps Icon")
+            }
+        }
+        
         enum Common {
-            static let downArrow = UIImage(named: "Down_Arrow")
-            static let add = UIImage(named: "Add_Button")
+            static let downArrow = UIImage(named: "Down Arrow")
+            static let add = UIImage(named: "Add Button")
         }
     }
     
@@ -89,5 +109,3 @@ enum R {
         }
     }
 }
-
-

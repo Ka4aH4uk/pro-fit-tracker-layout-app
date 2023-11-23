@@ -52,4 +52,13 @@ extension UIView {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    // Тени для UI-элементов
+    func addShadow() {
+        layer.shadowColor = R.Colors.shadow.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 0, height: 2)
+        layer.shadowRadius = 4
+        layer.masksToBounds = false
+    }
 }
