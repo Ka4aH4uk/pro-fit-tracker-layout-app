@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class DailyPerformanceView: WABaseInfoView {
+final class DailyPerformanceView: PFBaseInfoView {
     
-    private let barsView = WABarsView()
-
-    func configure(with items: [WABarView.Data]) {
+    private let barsView = PFBarsView()
+    
+    func configure(with items: [PFBarView.Data]) {
         barsView.configure(with: items)
     }
 }
@@ -19,13 +19,13 @@ final class DailyPerformanceView: WABaseInfoView {
 extension DailyPerformanceView {
     override func setupViews() {
         super.setupViews()
-
+        
         setupView(barsView)
     }
-
+    
     override func constraintViews() {
         super.constraintViews()
-
+        
         NSLayoutConstraint.activate([
             barsView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             barsView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -33,7 +33,7 @@ extension DailyPerformanceView {
             barsView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
         ])
     }
-
+    
     override func configureAppearance() {
         super.configureAppearance()
     }

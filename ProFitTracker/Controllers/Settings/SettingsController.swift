@@ -7,13 +7,12 @@
 
 import UIKit
 
-class SettingsController: WABaseController {
+class SettingsController: PFBaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = R.Strings.NavBar.settings
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: Tabs.settings)
-       
     }
 }

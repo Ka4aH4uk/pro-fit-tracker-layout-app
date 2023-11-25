@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProgressController: WABaseController {
+class ProgressController: PFBaseController {
     
     // TODO: Решить проблему масштабирования на разных экранах
     private let dailyPerformanceView = DailyPerformanceView(with: R.Strings.Progress.dailyPerformance,
@@ -23,21 +23,21 @@ class ProgressController: WABaseController {
 extension ProgressController {
     override func setupViews() {
         super.setupViews()
-
+        
         view.setupView(dailyPerformanceView)
         view.setupView(monthlyPerformanceView)
     }
-
+    
     override func constraintViews() {
         super.constraintViews()
-
+        
         NSLayoutConstraint.activate([
             dailyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             dailyPerformanceView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
             dailyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             dailyPerformanceView.heightAnchor.constraint(equalTo: dailyPerformanceView.widthAnchor,
                                                          multiplier: 0.68),
-
+            
             monthlyPerformanceView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             monthlyPerformanceView.topAnchor.constraint(equalTo: dailyPerformanceView.bottomAnchor, constant: 15),
             monthlyPerformanceView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
@@ -45,16 +45,16 @@ extension ProgressController {
                                                            multiplier: 1.06),
         ])
     }
-
+    
     override func configureAppearance() {
         super.configureAppearance()
-
+        
         title = R.Strings.NavBar.progress
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: Tabs.progress)
         
         addNavBarButton(at: .left, with: R.Strings.Progress.navBarLeft)
         addNavBarButton(at: .right, with: R.Strings.Progress.navBarRight)
-
+        
         dailyPerformanceView.configure(with: [.init(value: "2", heightMultiplier: 0.4, title: "Mon"),
                                               .init(value: "1", heightMultiplier: 0.2, title: "Tue"),
                                               .init(value: "3", heightMultiplier: 0.6, title: "Wed"),
@@ -62,7 +62,7 @@ extension ProgressController {
                                               .init(value: "5", heightMultiplier: 1.0, title: "Fri"),
                                               .init(value: "2", heightMultiplier: 0.4, title: "Sat"),
                                               .init(value: "3", heightMultiplier: 0.6, title: "Sun")])
-
+        
         monthlyPerformanceView.configure(with: [.init(value: 45, title: "Mar"),
                                                 .init(value: 25, title: "Apr"),
                                                 .init(value: 60, title: "May"),

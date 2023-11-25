@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class StatsView: WABaseInfoView {
-
+final class StatsView: PFBaseInfoView {
+    
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
         view.spacing = 15
         return view
     }()
-
+    
     func configure(with itmes: [StatsItem]) {
         itmes.forEach {
             let itmeView = StatsItemView()
@@ -28,13 +28,13 @@ final class StatsView: WABaseInfoView {
 extension StatsView {
     override func setupViews() {
         super.setupViews()
-
+        
         setupView(stackView)
     }
-
+    
     override func constraintViews() {
         super.constraintViews()
-
+        
         NSLayoutConstraint.activate([
             stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
@@ -42,7 +42,7 @@ extension StatsView {
             stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
         ])
     }
-
+    
     override func configureAppearance() {
         super.configureAppearance()
     }

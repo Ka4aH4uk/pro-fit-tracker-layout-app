@@ -1,5 +1,5 @@
 //
-//  BaseView.swift
+//  PFBaseView.swift
 //  ProFitTracker
 //
 //  Created by K4 on 20.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WABaseView: UIView {
+class PFBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -21,7 +21,7 @@ class WABaseView: UIView {
     }
 }
 
-@objc extension WABaseView {
+@objc extension PFBaseView {
     func setupViews() {}
     
     func constraintViews() {}

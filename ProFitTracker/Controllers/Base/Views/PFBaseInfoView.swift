@@ -1,5 +1,5 @@
 //
-//  BaseInfoView.swift
+//  PFBaseInfoView.swift
 //  ProFitTracker
 //
 //  Created by K4 on 21.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WABaseInfoView: WABaseView {
+class PFBaseInfoView: PFBaseView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -16,7 +16,7 @@ class WABaseInfoView: WABaseView {
         return label
     }()
     
-    private let button = WAButton(with: .primary)
+    private let button = PFButton(with: .primary)
     
     let contentView: UIView = {
         let view = UIView()
@@ -47,7 +47,7 @@ class WABaseInfoView: WABaseView {
     }
 }
 
-extension WABaseInfoView {
+extension PFBaseInfoView {
     override func setupViews() {
         super.setupViews()
         
@@ -61,7 +61,7 @@ extension WABaseInfoView {
     override func constraintViews() {
         super.constraintViews()
         
-        // проверка на наличие текста, чтобы изменять верхние границы вью
+        // Проверка на наличие текста, чтобы изменять верхние границы вью
         let contentTopAnchor: NSLayoutAnchor = titleLabel.text == nil ? topAnchor : titleLabel.bottomAnchor
         let contentTopOffset: CGFloat = titleLabel.text == nil ? 0: 10
         

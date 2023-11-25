@@ -1,5 +1,5 @@
 //
-//  WABaseController.swift
+//  PFBaseController.swift
 //  ProFitTracker
 //
 //  Created by K4 on 20.11.2023.
@@ -11,7 +11,7 @@ enum NavBarPosition {
     case left, right
 }
 
-class WABaseController: UIViewController {
+class PFBaseController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class WABaseController: UIViewController {
     }
 }
 
-@objc extension WABaseController {
+@objc extension PFBaseController {
     func setupViews() {}
     
     func constraintViews() {}
@@ -40,7 +40,7 @@ class WABaseController: UIViewController {
     }
 }
 
-extension WABaseController {
+extension PFBaseController {
     func addNavBarButton(at position: NavBarPosition, with title: String) {
         let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)

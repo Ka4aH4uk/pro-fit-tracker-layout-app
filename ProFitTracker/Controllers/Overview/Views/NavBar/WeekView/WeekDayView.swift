@@ -8,7 +8,7 @@
 import UIKit
 
 extension WeekView {
-    final class WeekDayView: WABaseView {
+    final class WeekDayView: PFBaseView {
         
         private let nameLabel: UILabel = {
             let lable = UILabel()
@@ -68,7 +68,7 @@ extension WeekView.WeekDayView {
     
     override func configureAppearance() {
         super.configureAppearance()
-                
+        
         layer.cornerRadius = 5
         layer.masksToBounds = true
     }

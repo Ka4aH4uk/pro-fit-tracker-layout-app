@@ -7,8 +7,8 @@
 
 import UIKit
 
-final class YAxisView: WABaseView {
-
+final class YAxisView: PFBaseView {
+    
     private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -16,7 +16,7 @@ final class YAxisView: WABaseView {
         return stack
     }()
     
-    func configure(with data: [WAChartsView.Data]) {
+    func configure(with data: [PFChartsView.Data]) {
         stackView.arrangedSubviews.forEach {
             $0.removeFromSuperview()
         }
@@ -36,10 +36,10 @@ final class YAxisView: WABaseView {
 extension YAxisView {
     override func setupViews() {
         super.setupViews()
-
+        
         setupView(stackView)
     }
-
+    
     override func constraintViews() {
         super.constraintViews()
         
@@ -50,10 +50,10 @@ extension YAxisView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
-
+    
     override func configureAppearance() {
         super.configureAppearance()
-
+        
         backgroundColor = .clear
     }
 }

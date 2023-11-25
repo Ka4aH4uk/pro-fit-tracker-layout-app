@@ -41,10 +41,10 @@ final class SectionHeaderView: UICollectionReusableView {
         self.title.text = dateFormatter.string(from: date).uppercased()
     }
 }
-    
+
 private extension SectionHeaderView {
     func setupViews() {
-        setupView(title) // ?
+        setupView(title)
     }
     
     func constraintViews() {

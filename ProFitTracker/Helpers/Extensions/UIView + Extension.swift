@@ -60,7 +60,6 @@ extension UIView {
         layer.shadowOpacity = 0.6
         layer.shadowOffset = CGSize(width: 0, height: 2)
         layer.shadowRadius = 4
-        layer.masksToBounds = false
     }
     
     // Закругление углов
@@ -79,7 +78,7 @@ extension UIView {
         borderLayer.strokeColor = R.Colors.separator.cgColor
         borderLayer.fillColor = UIColor.clear.cgColor
         borderLayer.lineWidth = 1
-
+        
         layer.mask = maskLayer
         layer.addSublayer(borderLayer)
     }

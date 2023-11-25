@@ -40,7 +40,7 @@ final class TrainingCellView: UICollectionViewCell {
     }()
     
     private let rightArrowView = UIImageView(image: R.Images.Overview.rightArrow)
-        
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -64,7 +64,7 @@ final class TrainingCellView: UICollectionViewCell {
         checkmarkView.image = isDone ? R.Images.Overview.checkmarkDone : R.Images.Overview.checkmarkNotDone
         
         switch roundedType {
-        case .all: 
+        case .all:
             self.addRoundCorners([.allCorners], radius: 10)
         case .bottom:
             self.addRoundCorners([.bottomLeft, .bottomRight], radius: 10)
@@ -75,7 +75,7 @@ final class TrainingCellView: UICollectionViewCell {
         }
     }
 }
-    
+
 private extension TrainingCellView {
     func setupViews() {
         setupView(checkmarkView)

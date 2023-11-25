@@ -1,5 +1,5 @@
 //
-//  WABarsView.swift
+//  PFBarsView.swift
 //  ProFitTracker
 //
 //  Created by K4 on 23.11.2023.
@@ -7,29 +7,29 @@
 
 import UIKit
 
-final class WABarsView: WABaseView {
-
+final class PFBarsView: PFBaseView {
+    
     private let stackView: UIStackView = {
         let view = UIStackView()
         view.distribution = .fillEqually
         return view
     }()
-
-    func configure(with data: [WABarView.Data]) {
+    
+    func configure(with data: [PFBarView.Data]) {
         data.forEach {
-            let barView = WABarView(data: $0)
+            let barView = PFBarView(data: $0)
             stackView.addArrangedSubview(barView)
         }
     }
 }
 
-extension WABarsView {
+extension PFBarsView {
     override func setupViews() {
         super.setupViews()
-
+        
         setupView(stackView)
     }
-
+    
     override func constraintViews() {
         super.constraintViews()
         
@@ -40,10 +40,10 @@ extension WABarsView {
             stackView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
-
+    
     override func configureAppearance() {
         super.configureAppearance()
-
+        
         backgroundColor = .clear
     }
 }

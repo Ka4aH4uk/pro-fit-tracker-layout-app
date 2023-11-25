@@ -1,5 +1,5 @@
 //
-//  WAButton.swift
+//  PFButton.swift
 //  ProFitTracker
 //
 //  Created by K4 on 20.11.2023.
@@ -11,7 +11,7 @@ public enum WAButtonType {
     case primary, secondary
 }
 
-final class WAButton: UIButton {
+final class PFButton: UIButton {
     
     private var type: WAButtonType = .primary
     
@@ -49,7 +49,7 @@ final class WAButton: UIButton {
     }
 }
 
-private extension WAButton {
+private extension PFButton {
     func setupViews() {
         setupView(label)
         setupView(iconView)

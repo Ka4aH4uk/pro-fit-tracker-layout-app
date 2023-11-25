@@ -18,7 +18,7 @@ struct TrainingData {
     }
 }
 
-class OverviewController: WABaseController {
+class OverviewController: PFBaseController {
     
     private let navBar = OverviewNavBar()
     
@@ -64,6 +64,8 @@ extension OverviewController {
         
         navigationController?.navigationBar.isHidden = true
         
+        collectionView.addShadow()
+        
         // Регистрируем ячейку
         collectionView.register(TrainingCellView.self,
                                 forCellWithReuseIdentifier: TrainingCellView.id)
@@ -74,7 +76,7 @@ extension OverviewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-                
+        
         dataSource = [
             .init(date: Date(),
                   items: [
@@ -163,4 +165,3 @@ extension OverviewController: UICollectionViewDelegateFlowLayout {
         CGSize(width: collectionView.frame.width, height: 32)
     }
 }
-

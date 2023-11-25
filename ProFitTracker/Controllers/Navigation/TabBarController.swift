@@ -49,7 +49,7 @@ final class TabBarController: UITabBarController {
         setViewControllers(controllers, animated: true)
     }
     
-    private func getController(for tab: Tabs) -> WABaseController {
+    private func getController(for tab: Tabs) -> PFBaseController {
         switch tab {
         case .overview:
             return OverviewController()

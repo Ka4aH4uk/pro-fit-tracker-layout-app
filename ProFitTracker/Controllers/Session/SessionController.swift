@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class SessionController: WABaseController {
+final class SessionController: PFBaseController {
     private let scrollView = UIScrollView() //
     private let contentView = UIView() //
-
+    
     private let timerView = TimerView()
     private let statsView = StatsView(with: R.Strings.Session.workoutStats)
     private let stepsView = StepsView(with: R.Strings.Session.stepsCounter)
@@ -49,29 +49,29 @@ extension SessionController {
         contentView.setupView(statsView)
         contentView.setupView(stepsView)
         
-//        view.setupView(timerView)
-//        view.setupView(statsView)
-//        view.setupView(stepsView)
+        //        view.setupView(timerView)
+        //        view.setupView(statsView)
+        //        view.setupView(stepsView)
     }
     
     override func constraintViews() {
         super.constraintViews()
         
         // Констрейнты без ScrollView
-//        NSLayoutConstraint.activate([
-//            timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-//            timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-//            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-//            
-//            statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
-//            statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
-//            statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
-//            
-//            stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
-//            stepsView.topAnchor.constraint(equalTo: statsView.topAnchor),
-//            stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
-//            stepsView.heightAnchor.constraint(equalTo: statsView.heightAnchor),
-//        ])
+        //        NSLayoutConstraint.activate([
+        //            timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+        //            timerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+        //            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+        //
+        //            statsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+        //            statsView.topAnchor.constraint(equalTo: timerView.bottomAnchor, constant: 10),
+        //            statsView.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -7.5),
+        //
+        //            stepsView.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 7.5),
+        //            stepsView.topAnchor.constraint(equalTo: statsView.topAnchor),
+        //            stepsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+        //            stepsView.heightAnchor.constraint(equalTo: statsView.heightAnchor),
+        //        ])
         
         // Констрейнты со ScrollView
         NSLayoutConstraint.activate([
@@ -108,7 +108,7 @@ extension SessionController {
         
         title = R.Strings.NavBar.session
         navigationController?.tabBarItem.title = R.Strings.TabBar.title(for: .session)
-                
+        
         addNavBarButton(at: .left, with: R.Strings.Session.navBarStart)
         addNavBarButton(at: .right, with: R.Strings.Session.navBarFinish)
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class WeekView: WABaseView {
+final class WeekView: PFBaseView {
     
     private var calendar = Date.calendar
     private let stackView = UIStackView()

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class OverviewNavBar: WABaseView {
+final class OverviewNavBar: PFBaseView {
     
     private let titleLabel: UILabel = {
         let title = UILabel()
@@ -17,8 +17,8 @@ final class OverviewNavBar: WABaseView {
         return title
     }()
     
-    private let allWWorkoutsButton: WAButton = {
-        let button = WAButton(with: .secondary)
+    private let allWWorkoutsButton: PFButton = {
+        let button = PFButton(with: .secondary)
         button.setTitle(R.Strings.Overview.allWorkoutButtons)
         return button
     }()
