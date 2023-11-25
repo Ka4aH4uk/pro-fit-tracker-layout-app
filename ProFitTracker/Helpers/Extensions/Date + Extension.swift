@@ -32,4 +32,8 @@ extension Date {
         let components = Date.calendar.dateComponents([.year, .month, .day], from: self)
         return Date.calendar.date(from: components) ?? self
     }
+    
+    func adding(days: Int) -> Date {
+        return Calendar.current.date(byAdding: .day, value: days, to: self) ?? self
+    }
 }

@@ -96,6 +96,12 @@ enum R {
             }
         }
         
+        enum Overview {
+            static let rightArrow = UIImage(named: "Right Arrow")
+            static let checkmarkNotDone = UIImage(named: "Oval")
+            static let checkmarkDone = UIImage(named: "Checkmark Done")
+        }
+        
         enum Session {
             enum Stats {
                 static let averagePace = UIImage(named: "Speed Icon")

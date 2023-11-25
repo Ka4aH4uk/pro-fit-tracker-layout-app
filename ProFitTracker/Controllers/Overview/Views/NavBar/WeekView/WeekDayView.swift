@@ -10,9 +10,26 @@ import UIKit
 extension WeekView {
     final class WeekDayView: WABaseView {
         
-        private let nameLable = UILabel()
-        private let dateLabel = UILabel()
-        private let stackView = UIStackView()
+        private let nameLabel: UILabel = {
+            let lable = UILabel()
+            lable.font = R.Fonts.helveticaRegular(with: 9)
+            lable.textAlignment = .center
+            return lable
+        }()
+        
+        private let dateLabel: UILabel = {
+            let lable = UILabel()
+            lable.font = R.Fonts.helveticaRegular(with: 15)
+            lable.textAlignment = .center
+            return lable
+        }()
+        
+        private let stackView: UIStackView = {
+            let view = UIStackView()
+            view.spacing = 3
+            view.axis = .vertical
+            return view
+        }()
         
         func configure(with index: Int, and name: String) {
             let startOfWeek = Date().startOfWeek
@@ -22,8 +39,8 @@ extension WeekView {
             let isToday = currentDay.stripDate() == Date().stripDate()
             backgroundColor = isToday ? R.Colors.active : R.Colors.background
             
-            nameLable.text = name.uppercased()
-            nameLable.textColor = isToday ? .white : R.Colors.inactive
+            nameLabel.text = name.uppercased()
+            nameLabel.textColor = isToday ? .white : R.Colors.inactive
             
             dateLabel.text = "\(day)"
             dateLabel.textColor = isToday ? .white : R.Colors.inactive
@@ -36,7 +53,7 @@ extension WeekView.WeekDayView {
         super.setupViews()
         
         setupView(stackView)
-        stackView.addArrangedSubview(nameLable)
+        stackView.addArrangedSubview(nameLabel)
         stackView.addArrangedSubview(dateLabel)
     }
     
@@ -54,14 +71,5 @@ extension WeekView.WeekDayView {
                 
         layer.cornerRadius = 5
         layer.masksToBounds = true
-        
-        nameLable.font = R.Fonts.helveticaRegular(with: 9)
-        nameLable.textAlignment = .center
-        
-        dateLabel.font = R.Fonts.helveticaRegular(with: 15)
-        dateLabel.textAlignment = .center
-        
-        stackView.spacing = 3
-        stackView.axis = .vertical
     }
 }

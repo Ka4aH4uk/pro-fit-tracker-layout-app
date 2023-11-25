@@ -68,22 +68,16 @@ extension OverviewNavBar {
             allWWorkoutsButton.topAnchor.constraint(equalTo: addButton.topAnchor),
             allWWorkoutsButton.trailingAnchor.constraint(equalTo: addButton.leadingAnchor, constant: -15),
             allWWorkoutsButton.heightAnchor.constraint(equalToConstant: 28),
-
+            
             titleLabel.centerYAnchor.constraint(equalTo: allWWorkoutsButton.centerYAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: allWWorkoutsButton.leadingAnchor),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
             
             weekView.topAnchor.constraint(equalTo: addButton.bottomAnchor, constant: 15),
-            weekView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             weekView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            weekView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             weekView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -15),
-            weekView.heightAnchor.constraint(equalToConstant: 47),
+            weekView.heightAnchor.constraint(equalToConstant: 47)
         ])
-    }
-    
-    override func configureAppearance() {
-        super.configureAppearance()
-        
-        backgroundColor = .white
     }
 }

@@ -11,10 +11,10 @@ final class NavBarController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configure()
+        configureAppearance()
     }
     
-    private func configure() {
+    private func configureAppearance() {
         view.backgroundColor = .white
         navigationBar.isTranslucent = false
         navigationBar.standardAppearance.titleTextAttributes = [

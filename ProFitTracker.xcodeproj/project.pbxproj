@@ -34,6 +34,8 @@
 		C9BF3C8C2B0FCDF10006ADA3 /* YAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C8B2B0FCDF10006ADA3 /* YAxisView.swift */; };
 		C9BF3C8E2B0FD9C00006ADA3 /* XAxisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C8D2B0FD9C00006ADA3 /* XAxisView.swift */; };
 		C9BF3C902B0FEFC80006ADA3 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C8F2B0FEFC80006ADA3 /* ChartView.swift */; };
+		C9BF3C952B10C70D0006ADA3 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C942B10C70D0006ADA3 /* SectionHeaderView.swift */; };
+		C9BF3C972B10DE140006ADA3 /* TrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BF3C962B10DE140006ADA3 /* TrainingCellView.swift */; };
 		C9D18F842B0D40370085381D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18F832B0D40370085381D /* TimerView.swift */; };
 		C9D18F872B0D41080085381D /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18F862B0D41080085381D /* ProgressView.swift */; };
 		C9D18FB02B0E7E5D0085381D /* PercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D18FAF2B0E7E5D0085381D /* PercentView.swift */; };
@@ -74,6 +76,8 @@
 		C9BF3C8B2B0FCDF10006ADA3 /* YAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAxisView.swift; sourceTree = "<group>"; };
 		C9BF3C8D2B0FD9C00006ADA3 /* XAxisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAxisView.swift; sourceTree = "<group>"; };
 		C9BF3C8F2B0FEFC80006ADA3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		C9BF3C942B10C70D0006ADA3 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		C9BF3C962B10DE140006ADA3 /* TrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCellView.swift; sourceTree = "<group>"; };
 		C9D18F832B0D40370085381D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C9D18F862B0D41080085381D /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		C9D18FAF2B0E7E5D0085381D /* PercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentView.swift; sourceTree = "<group>"; };
@@ -220,7 +224,8 @@
 		C98FCEE32B0AABA200FC19AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C98FCEEA2B0B835700FC19AD /* WeekView */,
+				C9BF3C922B10C6D70006ADA3 /* CollectionView */,
+				C9BF3C912B10C6C90006ADA3 /* NavBar */,
 				C98FCEE62B0AB83800FC19AD /* OverviewNavBar.swift */,
 			);
 			path = Views;
@@ -247,8 +252,8 @@
 		C98FCEF42B0CE9BE00FC19AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C9BF3C862B0FC73B0006ADA3 /* WAChartsView */,
-				C9D18FB72B0E8D810085381D /* WABarsView */,
+				C9BF3C862B0FC73B0006ADA3 /* PFChartsView */,
+				C9D18FB72B0E8D810085381D /* PFBarsView */,
 				C98FCEE82B0AB89600FC19AD /* WABaseView.swift */,
 				C98FCEF22B0CD3FF00FC19AD /* WABaseInfoView.swift */,
 				C98FCEE42B0AABC500FC19AD /* WAButton.swift */,
@@ -281,13 +286,13 @@
 			path = MonthlyPerformance;
 			sourceTree = "<group>";
 		};
-		C9BF3C862B0FC73B0006ADA3 /* WAChartsView */ = {
+		C9BF3C862B0FC73B0006ADA3 /* PFChartsView */ = {
 			isa = PBXGroup;
 			children = (
 				C9BF3C8A2B0FC7D10006ADA3 /* Views */,
 				C9BF3C872B0FC7520006ADA3 /* WAChartsView.swift */,
 			);
-			path = WAChartsView;
+			path = PFChartsView;
 			sourceTree = "<group>";
 		};
 		C9BF3C892B0FC7AE0006ADA3 /* Views */ = {
@@ -304,6 +309,31 @@
 				C9BF3C8D2B0FD9C00006ADA3 /* XAxisView.swift */,
 				C9BF3C8B2B0FCDF10006ADA3 /* YAxisView.swift */,
 				C9BF3C8F2B0FEFC80006ADA3 /* ChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C9BF3C912B10C6C90006ADA3 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				C98FCEEA2B0B835700FC19AD /* WeekView */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
+		C9BF3C922B10C6D70006ADA3 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF3C932B10C6F00006ADA3 /* Views */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		C9BF3C932B10C6F00006ADA3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C9BF3C942B10C70D0006ADA3 /* SectionHeaderView.swift */,
+				C9BF3C962B10DE140006ADA3 /* TrainingCellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -345,13 +375,13 @@
 			path = Steps;
 			sourceTree = "<group>";
 		};
-		C9D18FB72B0E8D810085381D /* WABarsView */ = {
+		C9D18FB72B0E8D810085381D /* PFBarsView */ = {
 			isa = PBXGroup;
 			children = (
 				C9D18FBA2B0E8DEE0085381D /* WABarView */,
 				C9D18FB82B0E8DA90085381D /* WABarsView.swift */,
 			);
-			path = WABarsView;
+			path = PFBarsView;
 			sourceTree = "<group>";
 		};
 		C9D18FBA2B0E8DEE0085381D /* WABarView */ = {
@@ -450,6 +480,7 @@
 				C98FCEE72B0AB83800FC19AD /* OverviewNavBar.swift in Sources */,
 				C98FCECA2B08F35100FC19AD /* TabBarController.swift in Sources */,
 				C9BF3C852B0FC1D10006ADA3 /* MonthlyPerformanceView.swift in Sources */,
+				C9BF3C972B10DE140006ADA3 /* TrainingCellView.swift in Sources */,
 				C98FCEB42B08E45D00FC19AD /* AppDelegate.swift in Sources */,
 				C9D18FB92B0E8DA90085381D /* WABarsView.swift in Sources */,
 				C98FCED22B0A956100FC19AD /* NavBarController.swift in Sources */,
@@ -471,6 +502,7 @@
 				C98FCED52B0A99AF00FC19AD /* WABaseController.swift in Sources */,
 				C9D18FBC2B0E8E020085381D /* WABarView.swift in Sources */,
 				C98FCEE92B0AB89600FC19AD /* WABaseView.swift in Sources */,
+				C9BF3C952B10C70D0006ADA3 /* SectionHeaderView.swift in Sources */,
 				C9D18FB62B0E8C9E0085381D /* StatsView.swift in Sources */,
 				C98FCEEE2B0B905300FC19AD /* WeekDayView.swift in Sources */,
 				C9BF3C902B0FEFC80006ADA3 /* ChartView.swift in Sources */,
