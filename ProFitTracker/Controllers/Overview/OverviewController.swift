@@ -92,6 +92,17 @@ extension OverviewController {
             .init(date: Date().adding(days: 2),
                   items: [
                     .init(title: "Cardio Interval Workout", subtitle: "Treadmill • 60 minutes", isDone: false),
+                  ]),
+            .init(date: Date().adding(days: 3),
+                  items: [
+                    .init(title: "Cardio Interval Workout", subtitle: "Treadmill • 60 minutes", isDone: false),
+                    .init(title: "Chest Workout", subtitle: "Bench Press • 3 sets • 10 reps", isDone: false),
+                  ]),
+            .init(date: Date().adding(days: 4),
+                  items: [
+                    .init(title: "Cardio Interval Workout", subtitle: "Treadmill • 60 minutes", isDone: false),
+                    .init(title: "Tricep Workout", subtitle: "Overhead Extension • 5 sets • 8 reps", isDone: false),
+                    .init(title: "High Intensity Cardio", subtitle: "Treadmill • 50 minutes", isDone: false)
                   ])
         ]
         
