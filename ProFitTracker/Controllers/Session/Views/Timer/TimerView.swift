@@ -114,6 +114,8 @@ final class TimerView: PFBaseInfoView {
             
             self.configure(with: self.timerDuration, progress: self.timerProgress)
         })
+        
+        RunLoop.current.add(timer, forMode: .common)
     }
     
     func pauseTimer() {
